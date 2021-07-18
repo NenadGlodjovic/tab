@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stil.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Srbija')">Srbija</button>
+        <button class="tablinks" onclick="openCity(event, 'Crna Gora')">Crna Gora</button>
+        <button class="tablinks" onclick="openCity(event, 'Bugarska')">Bugarska</button>
+      </div>
+      
+      <div id="Srbija" class="tabcontent">
+        <h3>Srbija</h3>
+        <p>Glavni grad Srbije je Beograd.</p>
+      </div>
+      
+      <div id="Crna Gora" class="tabcontent">
+        <h3>Crna Gora</h3>
+        <p>Glavni grad Crne Gore je Podgorica.</p> 
+      </div>
+      
+      <div id="Bugarska" class="tabcontent">
+        <h3>Bugarska</h3>
+        <p>Glavni grad Bugarske je Sofija.</p>
+      </div>
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      </script>
+</body>
+</html>
